@@ -16,8 +16,6 @@ $app->group('/api/v1', function(){
 
     $this->post('/produtos/add', function($request, $response){
         $token = $request->getParsedBody();
-        $secretkey = "c9b1fd873201074268c68a35b94ba54fbb8f76ed";
-        
         
 
 
@@ -35,7 +33,6 @@ $app->group('/api/v1', function(){
     });
     $this->put('/produtos/update/{id}', function($request, $response, $args){
         $token = $request->getParsedBody();
-        $secretkey = "c9b1fd873201074268c68a35b94ba54fbb8f76ed";
 
 
         if($token['chave'] === $secretkey){
@@ -55,7 +52,6 @@ $app->group('/api/v1', function(){
     $this->get('/produtos/delete/{id}', function($request, $response, $args){
 
         $token = $request->getParsedBody();
-        $secretkey = "c9b1fd873201074268c68a35b94ba54fbb8f76ed";
 
 
         if($token['chave'] === $secretkey){
